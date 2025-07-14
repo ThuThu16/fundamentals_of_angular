@@ -1,0 +1,14 @@
+<div class="editor-container">
+  <h2>Simple Text Editor</h2>
+
+  <textarea [(ngModel)]="text" placeholder="Type your message here..." rows="5" cols="50"></textarea>
+
+  <div class="btn-row">
+    <button (click)="toUpper()">UPPERCASE</button>
+    <button (click)="toLower()">lowercase</button>
+    <button (click)="clearText()">Clear</button>
+  </div>
+
+  <p><strong>Preview:</strong></p>
+  <p>{{ text }}</p>
+</div>

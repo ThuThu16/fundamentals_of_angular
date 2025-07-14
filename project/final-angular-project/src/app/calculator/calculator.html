@@ -1,0 +1,15 @@
+<div class="calculator-container">
+  <h2>Simple Calculator</h2>
+  
+  <input type="number" [(ngModel)]="num1" placeholder="Enter first number">
+  <input type="number" [(ngModel)]="num2" placeholder="Enter second number">
+
+  <div class="btn-row">
+    <button (click)="calculate('+')">+</button>
+    <button (click)="calculate('-')">−</button>
+    <button (click)="calculate('*')">×</button>
+    <button (click)="calculate('/')">÷</button>
+  </div>
+
+  <p *ngIf="result !== null">Result: {{ result }}</p>
+</div>

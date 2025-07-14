@@ -1,0 +1,32 @@
+<div>
+  <h2>Quiz</h2>
+
+  <form (ngSubmit)="submitQuiz()">
+    <div *ngFor="let question of questions; let i = index">
+      <p><strong>Question {{ i + 1 }}:</strong> {{ question.text }}</p>
+      <div *ngFor="let option of question.options">
+        <label>
+          <input
+            type="radio"
+            name="question{{ i }}"
+            [value]="option"
+            [(ngModel)]="userAnswers[i]"
+            required
+          />
+          {{ option }}
+        </label>
+      </div>
+    </div>
+
+    <button type="submit">Submit Answers</button>
+  </form>
+
+  <div *ngIf="resultShown">
+    <p>You got {{ correctCount }} out of {{ questions.length }} correct.</p>
+    <div *ngFor="let item of feedback; let i = index">
+      <p *ngIf="!item.correct" style="color: red;">
+        Question {{ i + 1 }} was incorrect. Correct answer: {{ item.correctAnswer }}
+      </p>
+    </div>
+  </div>
+</div>
