@@ -1,0 +1,24 @@
+<h2>ngSwitch Profile Viewer</h2>
+
+<button (click)="setView('name')">Name</button>
+<button (click)="setView('age')">Age</button>
+<button (click)="setView('job')">Job</button>
+
+<div [ngSwitch]="currentView">
+  <div *ngSwitchCase="'name'">
+    <h3>Name</h3>
+    <p>My name is Sam.</p>
+  </div>
+  <div *ngSwitchCase="'age'">
+    <h3>Age</h3>
+    <p>I am 100 years old.</p>
+  </div>
+  <div *ngSwitchCase="'job'">
+    <h3>Job</h3>
+    <p>I am a developer.</p>
+  </div>
+  <div *ngSwitchDefault>
+    <h3>Welcome!</h3>
+    <p>Please select a tab above to see details.</p>
+  </div>
+</div>

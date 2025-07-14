@@ -1,0 +1,10 @@
+<h2>Randomizer App</h2>
+<p>This app generates a random number between 1 and 100 and adds your input to it.</p>
+
+<input type="number" (input)="updateInput($event)" placeholder="Enter a number" />
+
+<button (click)="generate()">Generate</button>
+
+<p *ngIf="number() !== null && result() !== null">
+  {{ number() }} + {{ inputValue() }} = {{ result() }}
+</p>

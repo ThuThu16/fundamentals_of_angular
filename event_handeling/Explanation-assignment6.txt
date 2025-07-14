@@ -1,0 +1,5 @@
+In the example, an observed value called numberObservable is defined utilizing the RxJS's interval(1000), which prints numbers that increase once in one second (i.e., 0, 1, 2...). These numbers are further multiplied with 2 utilizing the .pipe(map(value => value * 2)).
+
+The template utilizes {{ numberObservable | async }} to render this value. The async pipe automatically subscribes to the observable and, in the view, updates it with the most recently emitted value once every second. It automatically unsubscribes on destruction, which eliminates memory leaks and results in neater code.
+
+It's a simple and efficient way to work with observables in Angular templates without manual subscription logic implementation.

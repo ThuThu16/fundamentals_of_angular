@@ -1,0 +1,14 @@
+<h1>{{ title() }}</h1>
+
+<button
+  (click)="toggleButton()"
+  [style.backgroundColor]="buttonColor"
+  style="color: white; font-weight: bold;"
+>
+  Click me
+</button>
+
+<div *ngIf="showMessage">
+  <p>{{ userInput }}</p>
+  <input [(ngModel)]="userInput" />
+</div>

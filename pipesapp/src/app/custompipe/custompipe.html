@@ -1,0 +1,9 @@
+<div>
+  <h3>Custom String Pipe</h3>
+
+  <label for="textInput">Enter your string:</label>
+  <input id="textInput" type="text" [(ngModel)]="originalText" />
+<p><strong>Original:</strong> {{ originalText }}</p>
+<p><strong>Transformed:</strong> {{ originalText | stringCleaner }}</p>
+
+</div>

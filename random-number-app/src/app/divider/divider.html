@@ -1,0 +1,13 @@
+<div>
+  <h3>Divider</h3>
+  <label for="divisor">Select a number to divide with:</label>
+  <select id="divisor" (change)="updateDivisor($event)">
+    <option *ngFor="let n of [2,3,4,5,6,7,8,9,10]" [value]="n">{{ n }}</option>
+  </select>
+
+  <button (click)="divide()">Divide</button>
+
+  <p *ngIf="divisionResult() !== null">
+    Result: {{ numberToDivide }} / {{ divisor() }} = {{ divisionResult() }}
+  </p>
+</div>

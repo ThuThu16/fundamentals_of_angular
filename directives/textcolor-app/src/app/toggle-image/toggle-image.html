@@ -1,0 +1,9 @@
+<div class="container">
+  <button (click)="toggle()">
+    {{ showImage ? 'Hide' : 'Show' }} Image
+  </button>
+
+  <div *ngIf="showImage">
+    <img src="https://pethelpful.com/.image/w_1920,q_auto:good,c_fill,ar_4:3,g_xy_center,x_588,y_295/NDowMDAwMDAwMDAwMDkzMTgz/golden-retriever-puppies-side-by-side.jpg" alt="Example image"  width="400"/>
+  </div>
+</div>

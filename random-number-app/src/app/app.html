@@ -1,0 +1,7 @@
+<h1>{{ title() }}</h1>
+
+<p>This app generates a random number, adds a user-provided value, and allows you to divide the result.</p>
+
+<app-randomizer (resultGenerated)="updateResult($event)"></app-randomizer>
+
+<app-divider [numberToDivide]="result()"></app-divider>
